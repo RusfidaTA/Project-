@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+void main()
+
+{
+
+int i,size1,size2,array1[20],array2[10];
+
+clrscr();
+
+printf("Enter the size of Array 1:");
+
+scanf("%d",&size1);
+
+printf("Enter the elements of Array 1:");
+
+for(i=0;i<size1;i++)
+
+scanf("%d",&array1[i]);
+
+printf("Enter the size of Array 2:");
+
+scanf("%d",&size2);
+
+printf("Enter the elements of Array 2:");
+
+for(i=0;i<size2;i++)
+
+scanf("%d",&array2[i]);
+
+for(i=size1;i<size1+size2;i++)
+
+array1[i]=array2[i-size1];
+
+printf("The new array after appending is:");
+
+for(i=0;i<size1+size2;i++)
+
+printf("%d ",array1[i]);
